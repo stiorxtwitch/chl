@@ -419,7 +419,7 @@
         <button class="filter-btn active" onclick="filterGallery('all', this)">Toutes</button>
         <button class="filter-btn" onclick="filterGallery('batiments', this)">Bâtiments</button>
         <button class="filter-btn" onclick="filterGallery('equipes', this)">Équipes</button>
-        <button class="filter-btn" onclick="filterGallery('tech', this)">Technologie</button>
+        <button class="filter-btn" onclick="filterGallery('car', this)">Nos véhicule</button>
         <button class="filter-btn" onclick="filterGallery('vie', this)">Vie hospitalière</button>
         <button class="filter-btn" onclick="filterGallery('formation', this)">Formation</button>
       </div>
@@ -740,18 +740,18 @@ function toggleMenu() {
 
 // ── GALERIE ──
 const galleryData = [
-  { cat: 'batiments', label: 'Site principal', sub: 'Sart Tilman', image: 'https://i.imgur.com/FIWNx54.jpeg' },
-  { cat: 'equipes', label: 'Équipe de cardiologie', sub: 'Dr. Martin et son équipe', image: 'https://i.imgur.com/FIWNx54.jpeg', tall: true },
-  { cat: 'tech', label: 'Robot chirurgical Da Vinci', sub: 'Bloc opératoire Nord', image: 'https://i.imgur.com/FIWNx54.jpeg' },
-  { cat: 'vie', label: 'Cafétéria & espaces de vie', sub: 'Bâtiment central', image: 'https://i.imgur.com/FIWNx54.jpeg' },
-  { cat: 'batiments', label: 'Entrée des urgences', sub: 'Disponible 24h/24', image: 'https://i.imgur.com/FIWNx54.jpeg' },
-  { cat: 'formation', label: 'Amphithéâtre de formation', sub: 'Centre de simulation', image: 'https://i.imgur.com/FIWNx54.jpeg', tall: true },
-  { cat: 'tech', label: 'Laboratoire de génomique', sub: 'Unité de recherche', image: 'https://i.imgur.com/FIWNx54.jpeg' },
-  { cat: 'equipes', label: 'Service de pédiatrie', sub: 'Accueil des enfants', image: 'https://i.imgur.com/FIWNx54.jpeg' },
-  { cat: 'batiments', label: 'Jardins thérapeutiques', sub: 'Espace bien-être', image: 'https://i.imgur.com/FIWNx54.jpeg' },
-  { cat: 'vie', label: 'Art en milieu hospitalier', sub: 'Programme Kultur', image: 'https://i.imgur.com/FIWNx54.jpeg' },
-  { cat: 'tech', label: 'IRM 3 Tesla', sub: 'Imagerie médicale', image: 'https://i.imgur.com/FIWNx54.jpeg' },
-  { cat: 'formation', label: 'Remise des diplômes', sub: 'École infirmière CHL', image: 'https://i.imgur.com/FIWNx54.jpeg' },
+  { cat: 'car', label: 'SMUR CHL', sub: 'Centre Hospitalier Liège', image: 'https://i.imgur.com/cvutyyv.png' },
+  { cat: 'equipes', label: 'Équipe du CHL', sub: 'Joyeuse Pâques', image: 'https://i.imgur.com/4TOJB6K.png', tall: true },
+  { cat: 'equipes', label: 'Photo de groupe', sub: 'Équipe du CHL avec le HML', image: 'https://i.imgur.com/RLYSi8k.png' },
+  { cat: 'equipes', label: 'La famille', sub: 'Le CHL n"est pas une équipe mais une famille', image: 'https://i.imgur.com/7aAvx1A.png' },
+  { cat: 'equipes', label: 'Le CHL à au funérailles du policier', sub: 'Repose en paix', image: 'https://i.imgur.com/IzebbxE.jpeg' }
+  //{ cat: 'formation', label: 'Amphithéâtre de formation', sub: 'Centre de simulation', image: 'https://i.imgur.com/FIWNx54.jpeg', tall: true },
+  //{ cat: 'car', label: 'Laboratoire de génomique', sub: 'Unité de recherche', image: 'https://i.imgur.com/FIWNx54.jpeg' },
+  //{ cat: 'equipes', label: 'Service de pédiatrie', sub: 'Accueil des enfants', image: 'https://i.imgur.com/FIWNx54.jpeg' },
+  //{ cat: 'batiments', label: 'Jardins thérapeutiques', sub: 'Espace bien-être', image: 'https://i.imgur.com/FIWNx54.jpeg' },
+  //{ cat: 'vie', label: 'Art en milieu hospitalier', sub: 'Programme Kultur', image: 'https://i.imgur.com/FIWNx54.jpeg' },
+  //{ cat: 'car', label: 'IRM 3 Tesla', sub: 'Imagerie médicale', image: 'https://i.imgur.com/FIWNx54.jpeg' },
+  //{ cat: 'formation', label: 'Remise des diplômes', sub: 'École infirmière CHL', image: 'https://i.imgur.com/FIWNx54.jpeg' },
 ];
 
 function renderGallery(filter) {
