@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHL – Centre Hospitalier de Liège</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+<!-- BARRE URGENCES -->
+<div class="urgences-banner">
+  <p>🚨 Urgences 24h/24 — Tél. <a href="tel:+3242256111">+32 4 225 61 11</a> &nbsp;|&nbsp; SMUR : <a href="tel:100">100</a> &nbsp;|&nbsp; <strong>Adresse :</strong> Rue de Gaillarmont 600, 4032 Chênée, Liège</p>
+</div>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="#" onclick="showPage('accueil')">
+      <div class="nav-logo-icon">CHL</div>
+      <div class="nav-logo-text">
+        <strong>Centre Hospitalier de Liège</strong>
+        <span>Hôpital Universitaire</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#" class="active" onclick="showPage('accueil'); setActive(this)">Accueil</a></li>
+      <li><a href="#" onclick="showPage('apropos'); setActive(this)">À propos</a></li>
+      <li><a href="#" onclick="showPage('galerie'); setActive(this)">Galerie</a></li>
+      <li><a href="#" onclick="showPage('effectifs'); setActive(this)">Effectifs</a></li>
+      <li><a href="#" onclick="showPage('innovation'); setActive(this)">Innovation</a></li>
+      <li><a href="tel:+3242256111" class="btn nav-cta">📞 Urgences</a></li>
+    </ul>
+    <button class="nav-hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════
+     PAGE 1 — ACCUEIL
+══════════════════════════════════════ -->
+<div id="page-accueil" class="page active">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-pattern"></div>
+    <div class="hero-shapes"></div>
+    <div class="hero-content">
+      <div>
+        <div class="hero-badge anim anim-1">
+          <span class="hero-dot"></span>
+          Hôpital Universitaire — CHU de Liège
+        </div>
+        <h1 class="anim anim-2">
+          Soins d'excellence<br>au cœur de <em>Liège</em>
+        </h1>
+        <p class="anim anim-3">
+          Le CHL vous accueille 24h/24 avec une équipe de plus de 4 500 professionnels dévoués à votre santé. Soins de pointe, humanité et innovation au service de chaque patient.
+        </p>
+        <div class="hero-actions anim anim-4">
+          <a href="#" class="btn btn-white" onclick="showPage('apropos')">Découvrir le CHL</a>
+          <a href="#" class="btn btn-outline-white" onclick="showPage('effectifs')">Nos équipes →</a>
+        </div>
+        <div class="hero-stats anim anim-4">
+          <div class="hero-stat"><strong>4 500+</strong><span>Professionnels</span></div>
+          <div class="hero-stat"><strong>900</strong><span>Lits</span></div>
+          <div class="hero-stat"><strong>60+</strong><span>Spécialités</span></div>
+          <div class="hero-stat"><strong>1 872</strong><span>Fondé en</span></div>
+        </div>
+      </div>
+      <div class="hero-cards anim anim-3">
+        <div class="hero-card">
+          <div class="hero-card-icon" style="background: rgba(0,137,123,0.25);">🏥</div>
+          <h3>Urgences</h3>
+          <p>Prise en charge immédiate, 7j/7, 24h/24</p>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon" style="background: rgba(200,144,45,0.25);">🔬</div>
+          <h3>Recherche</h3>
+          <p>Centre de recherche clinique de renommée internationale</p>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon" style="background: rgba(255,255,255,0.15);">👶</div>
+          <h3>Maternité</h3>
+          <p>Plus de 3 200 naissances par an</p>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon" style="background: rgba(0,137,123,0.25);">🤖</div>
+          <h3>Innovation</h3>
+          <p>Chirurgie robotique et IA médicale</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-tag">Nos Pôles de Soins</div>
+        <h2 class="section-title">Des spécialités médicales complètes</h2>
+        <p class="section-subtitle">Du diagnostic au suivi post-opératoire, nos équipes multidisciplinaires vous accompagnent à chaque étape de votre parcours de soin.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">❤️</div>
+          <h3>Cardiologie & Chirurgie Cardiaque</h3>
+          <p>Centre de référence pour les pathologies cardiovasculaires. Cathétérisme, chirurgie à cœur ouvert et cardiologie interventionnelle.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🧠</div>
+          <h3>Neurologie & Neurochirurgie</h3>
+          <p>Prise en charge des AVC, épilepsies, tumeurs cérébrales et pathologies neurodégénératives avec des équipements de dernière génération.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">👶</div>
+          <h3>Pédiatrie & Néonatologie</h3>
+          <p>Un service entièrement dédié à l'enfant, du nouveau-né prématuré à l'adolescent, avec une unité de soins intensifs néonatals.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🦷</div>
+          <h3>Oncologie & Hémato-Oncologie</h3>
+          <p>Traitement multidisciplinaire du cancer : chimiothérapie, radiothérapie, immunothérapie et essais cliniques innovants.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🦴</div>
+          <h3>Orthopédie & Traumatologie</h3>
+          <p>Chirurgie prothétique, rachis, genou, hanche et épaule. Réhabilitation post-opératoire intégrée au sein du service.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔬</div>
+          <h3>Médecine Interne & Infectiologie</h3>
+          <p>Diagnostic des pathologies complexes, maladies auto-immunes et infectieuses avec un laboratoire de biologie clinique performant.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTUALITÉS -->
+  <section class="section bg-offwhite">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-tag">Actualités</div>
+        <h2 class="section-title">Les dernières nouvelles du CHL</h2>
+        <p class="section-subtitle">Restez informé des avancées médicales, des événements et des projets qui animent notre hôpital.</p>
+      </div>
+      <div class="actu-grid">
+        <div class="actu-card">
+          <div class="actu-img" style="background: linear-gradient(135deg, #e8f0fa, #d0e4f7);">🤖</div>
+          <div class="actu-body">
+            <div class="actu-tag">Innovation</div>
+            <h3>Le CHL acquiert un robot chirurgical de 4ème génération</h3>
+            <p>Notre bloc opératoire s'enrichit d'un système robotique Da Vinci Xi pour les interventions mini-invasives en urologie et gynécologie.</p>
+            <div class="actu-date">📅 12 avril 2025</div>
+          </div>
+        </div>
+        <div class="actu-card">
+          <div class="actu-img" style="background: linear-gradient(135deg, #e0f2f0, #b2dfdb);">🏆</div>
+          <div class="actu-body">
+            <div class="actu-tag">Distinction</div>
+            <h3>Label « Hôpital Magnet » renouvelé pour la 3ème fois</h3>
+            <p>Le CHL obtient à nouveau cette distinction internationale reconnue pour l'excellence des soins infirmiers et la qualité du management.</p>
+            <div class="actu-date">📅 28 mars 2025</div>
+          </div>
+        </div>
+        <div class="actu-card">
+          <div class="actu-img" style="background: linear-gradient(135deg, #fef3cd, #fde68a);">🧬</div>
+          <div class="actu-body">
+            <div class="actu-tag">Recherche</div>
+            <h3>Nouveau centre de génomique médicale inauguré</h3>
+            <p>Un espace dédié au séquençage génomique pour personnaliser les traitements oncologiques et identifier les maladies rares avec précision.</p>
+            <div class="actu-date">📅 15 mars 2025</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHIFFRES CLÉS -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-tag">Chiffres Clés</div>
+        <h2 class="section-title">Le CHL en quelques chiffres</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; text-align: center;">
+        <div style="padding: 2rem; background: var(--chl-blue-pale); border-radius: var(--radius);">
+          <div style="font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--chl-blue); font-weight: 700;">50 000</div>
+          <div style="font-size: 14px; color: var(--chl-gray); margin-top: 4px;">Hospitalisations/an</div>
+        </div>
+        <div style="padding: 2rem; background: var(--chl-teal-light); border-radius: var(--radius);">
+          <div style="font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--chl-teal); font-weight: 700;">3 200</div>
+          <div style="font-size: 14px; color: var(--chl-gray); margin-top: 4px;">Naissances/an</div>
+        </div>
+        <div style="padding: 2rem; background: #fef9ec; border-radius: var(--radius);">
+          <div style="font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--chl-gold); font-weight: 700;">130 000</div>
+          <div style="font-size: 14px; color: var(--chl-gray); margin-top: 4px;">Consultations/an</div>
+        </div>
+        <div style="padding: 2rem; background: var(--chl-blue-pale); border-radius: var(--radius);">
+          <div style="font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--chl-blue); font-weight: 700;">900</div>
+          <div style="font-size: 14px; color: var(--chl-gray); margin-top: 4px;">Lits disponibles</div>
+        </div>
+        <div style="padding: 2rem; background: var(--chl-teal-light); border-radius: var(--radius);">
+          <div style="font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--chl-teal); font-weight: 700;">4 500</div>
+          <div style="font-size: 14px; color: var(--chl-gray); margin-top: 4px;">Collaborateurs</div>
+        </div>
+        <div style="padding: 2rem; background: #fef9ec; border-radius: var(--radius);">
+          <div style="font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--chl-gold); font-weight: 700;">60+</div>
+          <div style="font-size: 14px; color: var(--chl-gray); margin-top: 4px;">Spécialités</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT STRIP -->
+  <div class="contact-strip">
+    <h2>Besoin d'aide ou d'un rendez-vous ?</h2>
+    <p>Notre équipe est disponible pour vous orienter et répondre à toutes vos questions.</p>
+    <div class="contact-cards">
+      <div class="contact-card">
+        <div class="contact-card-icon">📞</div>
+        <h4>Standard général</h4>
+        <p><a href="tel:+3242256111">+32 4 225 61 11</a></p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">🚑</div>
+        <h4>Urgences & SMUR</h4>
+        <p><a href="tel:100">100</a> ou <a href="tel:+3242256111">+32 4 225 61 11</a></p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">📍</div>
+        <h4>Adresse principale</h4>
+        <p>Rue de Gaillarmont 600<br>4032 Chênée, Liège</p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">🌐</div>
+        <h4>Site officiel</h4>
+        <p><a href="https://www.chl.be" target="_blank">www.chl.be</a></p>
+      </div>
+    </div>
+  </div>
+
+</div><!-- fin page accueil -->
+
+
+<!-- ══════════════════════════════════════
+     PAGE 2 — À PROPOS
+══════════════════════════════════════ -->
+<div id="page-apropos" class="page">
+  <section class="about-hero">
+    <div class="about-hero-inner">
+      <div>
+        <div class="section-tag" style="display:inline-block; margin-bottom:1rem;">Notre histoire</div>
+        <h1>Un siècle et demi au service de la santé liégeoise</h1>
+        <p>Fondé en 1872, le Centre Hospitalier de Liège est l'un des plus grands hôpitaux publics de Wallonie. Adossé à l'Université de Liège, il allie soins cliniques, recherche fondamentale et formation médicale de haut niveau.</p>
+        <br>
+        <p>Ancré dans son territoire, le CHL s'est constamment renouvelé pour répondre aux besoins croissants de la population liégeoise et de la grande région. Aujourd'hui, il se positionne comme un acteur de référence de la santé en Belgique.</p>
+        <br>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-blue" onclick="showPage('effectifs')">Voir nos équipes</a>
+          <a href="#" class="btn" style="border: 1.5px solid rgba(0,63,127,0.2); color: var(--chl-blue);" onclick="showPage('innovation')">Innovation →</a>
+        </div>
+      </div>
+      <div class="about-visual">
+        <div style="color: rgba(255,255,255,0.7); font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">En chiffres</div>
+        <div class="about-stat-row">
+          <div class="about-stat-item">
+            <strong>152</strong>
+            <span>ans d'histoire</span>
+          </div>
+          <div class="about-stat-item">
+            <strong>3</strong>
+            <span>sites principaux</span>
+          </div>
+        </div>
+        <div class="about-stat-row">
+          <div class="about-stat-item">
+            <strong>700+</strong>
+            <span>médecins</span>
+          </div>
+          <div class="about-stat-item">
+            <strong>AAA</strong>
+            <span>accréditation</span>
+          </div>
+        </div>
+        <div style="background: rgba(255,255,255,0.08); border-radius: 12px; padding: 1rem; margin-top: 0.5rem;">
+          <div style="color: rgba(255,255,255,0.6); font-size: 12px; margin-bottom: 8px;">Certification ISO 9001 · EN 15224</div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <span style="background: rgba(0,137,123,0.3); color: #80cbc4; font-size: 11px; padding: 3px 10px; border-radius: 100px;">Joint Commission</span>
+            <span style="background: rgba(200,144,45,0.3); color: #ffcc80; font-size: 11px; padding: 3px 10px; border-radius: 100px;">Hôpital Magnet</span>
+            <span style="background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.8); font-size: 11px; padding: 3px 10px; border-radius: 100px;">CHU · ULiège</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTORIQUE -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-tag">Chronologie</div>
+        <h2 class="section-title">Les grandes étapes de notre histoire</h2>
+      </div>
+      <div style="max-width: 700px; margin: 0 auto;" class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">1872</div>
+          <h4>Fondation de l'hôpital de Bavière</h4>
+          <p>Ouverture du premier établissement hospitalier public à Liège, rue de Bavière, avec 300 lits et une mission de soin aux populations défavorisées.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">1920</div>
+          <h4>Affiliation à l'Université de Liège</h4>
+          <p>Le CHL devient centre hospitalo-universitaire, renforçant sa vocation de formation et de recherche médicale en partenariat avec l'ULiège.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">1968</div>
+          <h4>Ouverture du site de Sart Tilman</h4>
+          <p>Construction d'un nouveau site ultra-moderne sur le campus universitaire de Sart Tilman, doublant la capacité d'accueil de l'institution.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2001</div>
+          <h4>Création du Centre Hospitalier de Liège</h4>
+          <p>Fusion des différents sites et services au sein d'une seule entité juridique publique : le Centre Hospitalier de Liège, tel que nous le connaissons aujourd'hui.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2015</div>
+          <h4>Accréditation internationale Joint Commission</h4>
+          <p>Le CHL est l'un des premiers hôpitaux belges à obtenir cette accréditation de référence mondiale, gage de la qualité et sécurité des soins.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2024</div>
+          <h4>Plan stratégique Horizon 2030</h4>
+          <p>Lancement d'un ambitieux plan de transformation numérique, de rénovation des infrastructures et de développement des soins ambulatoires.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALEURS -->
+  <section class="section bg-offwhite">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-tag">Nos Valeurs</div>
+        <h2 class="section-title">Ce qui nous guide au quotidien</h2>
+        <p class="section-subtitle">Chaque geste de soin, chaque décision managériale est guidé par des valeurs fortes partagées par l'ensemble de nos collaborateurs.</p>
+      </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">💙</div>
+          <h3>Humanité</h3>
+          <p>Chaque patient est unique. Nous plaçons la personne, sa dignité et son vécu au centre de chaque acte de soin, avec empathie et respect.</p>
+        </div>
+        <div class="value-card" style="border-left-color: var(--chl-teal);">
+          <div class="value-icon">🔬</div>
+          <h3>Excellence</h3>
+          <p>Nous visons les plus hauts standards de qualité médicale, formés en permanence aux nouvelles techniques et guidés par les données probantes.</p>
+        </div>
+        <div class="value-card" style="border-left-color: var(--chl-gold);">
+          <div class="value-icon">🤝</div>
+          <h3>Solidarité</h3>
+          <p>Hôpital public et universitaire, nous accueillons chacun sans discrimination, avec une mission sociale forte envers les plus vulnérables.</p>
+        </div>
+        <div class="value-card" style="border-left-color: #7c3aed;">
+          <div class="value-icon">🚀</div>
+          <h3>Innovation</h3>
+          <p>La recherche et le progrès médical sont au cœur de notre ADN. Nous participons à des essais cliniques et développons de nouvelles pratiques.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIRECTION -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-tag">Direction Générale</div>
+        <h2 class="section-title">À la tête du CHL</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto;">
+        <div style="background: white; border: 1.5px solid rgba(0,63,127,0.08); border-radius: var(--radius); padding: 2rem; text-align: center;">
+          <div style="width: 80px; height: 80px; background: var(--chl-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-family: 'Playfair Display', serif; color: white; font-size: 1.8rem; font-weight: 700;">JL</div>
+          <h3 style="font-size: 1.1rem; font-weight: 600; color: var(--chl-dark);">Prof. Jean Leruth</h3>
+          <p style="font-size: 12px; color: var(--chl-blue); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Directeur Général</p>
+          <p style="font-size: 0.88rem; color: var(--chl-gray);">Médecin interniste, docteur en sciences médicales. À la tête du CHL depuis 2018.</p>
+        </div>
+        <div style="background: white; border: 1.5px solid rgba(0,63,127,0.08); border-radius: var(--radius); padding: 2rem; text-align: center;">
+          <div style="width: 80px; height: 80px; background: var(--chl-teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-family: 'Playfair Display', serif; color: white; font-size: 1.8rem; font-weight: 700;">MC</div>
+          <h3 style="font-size: 1.1rem; font-weight: 600; color: var(--chl-dark);">Mme Marie Collin</h3>
+          <p style="font-size: 12px; color: var(--chl-blue); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Directrice des Soins</p>
+          <p style="font-size: 0.88rem; color: var(--chl-gray);">Infirmière en chef de formation, master en santé publique. Référente qualité nationale.</p>
+        </div>
+        <div style="background: white; border: 1.5px solid rgba(0,63,127,0.08); border-radius: var(--radius); padding: 2rem; text-align: center;">
+          <div style="width: 80px; height: 80px; background: #7c3aed; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-family: 'Playfair Display', serif; color: white; font-size: 1.8rem; font-weight: 700;">PR</div>
+          <h3 style="font-size: 1.1rem; font-weight: 600; color: var(--chl-dark);">M. Philippe Renard</h3>
+          <p style="font-size: 12px; color: var(--chl-blue); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Directeur Financier</p>
+          <p style="font-size: 0.88rem; color: var(--chl-gray);">Expert-comptable, MBA HEC. Pilote la transformation financière et les investissements stratégiques.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- fin page apropos -->
+
+
+<!-- ══════════════════════════════════════
+     PAGE 3 — GALERIE
+══════════════════════════════════════ -->
+<div id="page-galerie" class="page">
+  <section class="gallery-hero">
+    <div class="gallery-hero-inner">
+      <div class="section-tag" style="background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.9);">Galerie Photographique</div>
+      <h1 style="margin-top: 1rem;">Le CHL en images</h1>
+      <p>Découvrez nos infrastructures, nos équipes et la vie hospitalière à travers notre galerie.</p>
+      <div class="gallery-filters">
+        <button class="filter-btn active" onclick="filterGallery('all', this)">Toutes</button>
+        <button class="filter-btn" onclick="filterGallery('batiments', this)">Bâtiments</button>
+        <button class="filter-btn" onclick="filterGallery('equipes', this)">Équipes</button>
+        <button class="filter-btn" onclick="filterGallery('tech', this)">Technologie</button>
+        <button class="filter-btn" onclick="filterGallery('vie', this)">Vie hospitalière</button>
+        <button class="filter-btn" onclick="filterGallery('formation', this)">Formation</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="gallery-grid" id="gallery-grid">
+    <!-- Les cartes sont générées par JS -->
+  </div>
+</div><!-- fin page galerie -->
+
+
+<!-- ══════════════════════════════════════
+     PAGE 4 — EFFECTIFS
+══════════════════════════════════════ -->
+<div id="page-effectifs" class="page">
+  <section class="effectifs-hero">
+    <div class="effectifs-hero-inner">
+      <div class="section-tag" style="display: inline-block; margin-bottom: 1rem;">Nos Équipes</div>
+      <h1>Des professionnels à votre service</h1>
+      <p>Plus de 4 500 collaborateurs — médecins, infirmiers, chercheurs, soignants — œuvrent chaque jour pour votre santé avec passion et expertise.</p>
+      <div class="dept-tabs" style="margin-top: 1.5rem;">
+        <button class="dept-tab active" onclick="filterTeam('all', this)">Tous les services</button>
+        <button class="dept-tab" onclick="filterTeam('cardio', this)">Cardiologie</button>
+        <button class="dept-tab" onclick="filterTeam('neuro', this)">Neurologie</button>
+        <button class="dept-tab" onclick="filterTeam('pediatrie', this)">Pédiatrie</button>
+        <button class="dept-tab" onclick="filterTeam('onco', this)">Oncologie</button>
+        <button class="dept-tab" onclick="filterTeam('urgences', this)">Urgences</button>
+        <button class="dept-tab" onclick="filterTeam('recherche', this)">Recherche</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats bandes -->
+  <div style="background: var(--chl-blue); padding: 2rem;">
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; text-align: center;">
+      <div><div style="font-family: 'Playfair Display', serif; font-size: 2rem; color: white; font-weight: 700;">700+</div><div style="font-size: 12px; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 0.6px;">Médecins</div></div>
+      <div><div style="font-family: 'Playfair Display', serif; font-size: 2rem; color: white; font-weight: 700;">2 100</div><div style="font-size: 12px; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 0.6px;">Infirmiers</div></div>
+      <div><div style="font-family: 'Playfair Display', serif; font-size: 2rem; color: white; font-weight: 700;">350</div><div style="font-size: 12px; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 0.6px;">Chercheurs</div></div>
+      <div><div style="font-family: 'Playfair Display', serif; font-size: 2rem; color: white; font-weight: 700;">1 350</div><div style="font-size: 12px; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 0.6px;">Autres soignants</div></div>
+    </div>
+  </div>
+
+  <div class="team-grid" id="team-grid">
+    <!-- Généré par JS -->
+  </div>
+</div><!-- fin page effectifs -->
+
+
+<!-- ══════════════════════════════════════
+     PAGE 5 — INNOVATION (CARTE BLANCHE)
+══════════════════════════════════════ -->
+<div id="page-innovation" class="page">
+  <section class="innov-hero">
+    <div class="innov-hero-inner">
+      <div class="section-tag" style="background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.9); display: inline-block; margin-bottom: 1rem;">Innovation & Recherche</div>
+      <h1>La médecine de demain,<br>développée aujourd'hui</h1>
+      <p>Le CHL investit massivement dans la recherche clinique, l'intelligence artificielle médicale et les technologies de pointe pour repousser les frontières du soin.</p>
+      <div class="hero-actions" style="justify-content: center;">
+        <a href="https://www.chl.be" target="_blank" class="btn btn-white">Explorer les projets</a>
+        <a href="#" class="btn btn-outline-white" onclick="showPage('effectifs')">Rejoindre l'équipe →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETS INNOVATION -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-tag">Projets Phares</div>
+        <h2 class="section-title">Nos initiatives d'excellence</h2>
+        <p class="section-subtitle">De la chirurgie robotique à l'IA diagnostique, le CHL est à la pointe de la révolution médicale.</p>
+      </div>
+      <div class="innov-grid">
+        <div class="innov-card">
+          <div class="innov-card-header">
+            <div class="innov-card-icon" style="background: var(--chl-blue-pale);">🤖</div>
+            <div>
+              <h3>Intelligence Artificielle en Radiologie</h3>
+              <p>Détection automatisée des anomalies sur les images médicales grâce à des algorithmes d'apprentissage profond.</p>
+            </div>
+          </div>
+          <div class="innov-card-body">
+            <div class="innov-stat-row">
+              <div class="innov-stat"><strong>94%</strong><span>Précision</span></div>
+              <div class="innov-stat"><strong>3×</strong><span>Plus rapide</span></div>
+            </div>
+            <div class="innov-progress">
+              <div class="innov-progress-label"><span>Déploiement en cours</span><span>78%</span></div>
+              <div class="progress-bar"><div class="progress-fill" style="width: 78%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="innov-card">
+          <div class="innov-card-header">
+            <div class="innov-card-icon" style="background: var(--chl-teal-light);">🦾</div>
+            <div>
+              <h3>Chirurgie Robotique Da Vinci</h3>
+              <p>Interventions mini-invasives de précision en urologie, gynécologie et chirurgie digestive.</p>
+            </div>
+          </div>
+          <div class="innov-card-body">
+            <div class="innov-stat-row">
+              <div class="innov-stat"><strong>1 200</strong><span>Opérations/an</span></div>
+              <div class="innov-stat"><strong>-60%</strong><span>Complications</span></div>
+            </div>
+            <div class="innov-progress">
+              <div class="innov-progress-label"><span>Capacité utilisée</span><span>85%</span></div>
+              <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="innov-card">
+          <div class="innov-card-header">
+            <div class="innov-card-icon" style="background: #f3e8ff;">🧬</div>
+            <div>
+              <h3>Médecine de Précision</h3>
+              <p>Séquençage génomique pour personnaliser les traitements oncologiques selon le profil moléculaire de chaque patient.</p>
+            </div>
+          </div>
+          <div class="innov-card-body">
+            <div class="innov-stat-row">
+              <div class="innov-stat"><strong>2 400</strong><span>Génomes/an</span></div>
+              <div class="innov-stat"><strong>+40%</strong><span>Efficacité thérapeutique</span></div>
+            </div>
+            <div class="innov-progress">
+              <div class="innov-progress-label"><span>Projets actifs</span><span>62%</span></div>
+              <div class="progress-bar"><div class="progress-fill" style="width: 62%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="innov-card">
+          <div class="innov-card-header">
+            <div class="innov-card-icon" style="background: #fef3cd;">📱</div>
+            <div>
+              <h3>Télémédecine & Suivi Connecté</h3>
+              <p>Plateformes numériques de suivi à domicile pour les patients chroniques : cardiologie, diabétologie, oncologie.</p>
+            </div>
+          </div>
+          <div class="innov-card-body">
+            <div class="innov-stat-row">
+              <div class="innov-stat"><strong>8 500</strong><span>Patients connectés</span></div>
+              <div class="innov-stat"><strong>-30%</strong><span>Réhospitalisations</span></div>
+            </div>
+            <div class="innov-progress">
+              <div class="innov-progress-label"><span>Expansion en cours</span><span>55%</span></div>
+              <div class="progress-bar"><div class="progress-fill" style="width: 55%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="innov-card">
+          <div class="innov-card-header">
+            <div class="innov-card-icon" style="background: #e8f5e9;">🌿</div>
+            <div>
+              <h3>Hôpital Vert — Plan Durabilité</h3>
+              <p>Réduction de l'empreinte carbone hospitalière : énergie renouvelable, gestion des déchets biomédicaux et mobilité douce.</p>
+            </div>
+          </div>
+          <div class="innov-card-body">
+            <div class="innov-stat-row">
+              <div class="innov-stat"><strong>-35%</strong><span>CO₂ depuis 2020</span></div>
+              <div class="innov-stat"><strong>2030</strong><span>Neutralité carbone</span></div>
+            </div>
+            <div class="innov-progress">
+              <div class="innov-progress-label"><span>Objectif 2030</span><span>48%</span></div>
+              <div class="progress-bar"><div class="progress-fill" style="width: 48%; background: linear-gradient(90deg, var(--chl-teal), #66bb6a);"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="innov-card">
+          <div class="innov-card-header">
+            <div class="innov-card-icon" style="background: #fce4ec;">🏫</div>
+            <div>
+              <h3>Centre de Simulation Médicale</h3>
+              <p>Mannequins haute-fidélité et réalité virtuelle pour former les soignants sans risque pour les patients.</p>
+            </div>
+          </div>
+          <div class="innov-card-body">
+            <div class="innov-stat-row">
+              <div class="innov-stat"><strong>3 000</strong><span>Apprenants/an</span></div>
+              <div class="innov-stat"><strong>24</strong><span>Simulateurs</span></div>
+            </div>
+            <div class="innov-progress">
+              <div class="innov-progress-label"><span>Taux d'occupation</span><span>91%</span></div>
+              <div class="progress-bar"><div class="progress-fill" style="width: 91%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTENARIATS -->
+  <section class="section bg-offwhite">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-tag">Partenariats</div>
+        <h2 class="section-title">Un réseau d'excellence mondial</h2>
+        <p class="section-subtitle">Le CHL collabore avec les plus grandes institutions académiques et hospitalières à travers le monde.</p>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+        <div style="background: white; border: 1.5px solid rgba(0,63,127,0.1); border-radius: 12px; padding: 1.25rem 2rem; font-weight: 600; color: var(--chl-dark); font-size: 15px;">🎓 ULiège</div>
+        <div style="background: white; border: 1.5px solid rgba(0,63,127,0.1); border-radius: 12px; padding: 1.25rem 2rem; font-weight: 600; color: var(--chl-dark); font-size: 15px;">🏥 CHU de Reims</div>
+        <div style="background: white; border: 1.5px solid rgba(0,63,127,0.1); border-radius: 12px; padding: 1.25rem 2rem; font-weight: 600; color: var(--chl-dark); font-size: 15px;">🔬 Institut Pasteur</div>
+        <div style="background: white; border: 1.5px solid rgba(0,63,127,0.1); border-radius: 12px; padding: 1.25rem 2rem; font-weight: 600; color: var(--chl-dark); font-size: 15px;">🌍 WHO / OMS</div>
+        <div style="background: white; border: 1.5px solid rgba(0,63,127,0.1); border-radius: 12px; padding: 1.25rem 2rem; font-weight: 600; color: var(--chl-dark); font-size: 15px;">💡 Microsoft Research</div>
+        <div style="background: white; border: 1.5px solid rgba(0,63,127,0.1); border-radius: 12px; padding: 1.25rem 2rem; font-weight: 600; color: var(--chl-dark); font-size: 15px;">🦠 FNRS Belgique</div>
+        <div style="background: white; border: 1.5px solid rgba(0,63,127,0.1); border-radius: 12px; padding: 1.25rem 2rem; font-weight: 600; color: var(--chl-dark); font-size: 15px;">🧬 Illumina / GenomIQ</div>
+        <div style="background: white; border: 1.5px solid rgba(0,63,127,0.1); border-radius: 12px; padding: 1.25rem 2rem; font-weight: 600; color: var(--chl-dark); font-size: 15px;">🤖 Intuitive Surgical</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT STRIP -->
+  <div class="contact-strip">
+    <h2>Un projet, une idée, un partenariat ?</h2>
+    <p>Notre équipe Innovation est ouverte à toutes les collaborations scientifiques et industrielles.</p>
+    <div class="contact-cards">
+      <div class="contact-card">
+        <div class="contact-card-icon">📧</div>
+        <h4>Innovation & R&D</h4>
+        <p><a href="mailto:innovation@chl.be">innovation@chl.be</a></p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">🤝</div>
+        <h4>Partenariats</h4>
+        <p><a href="mailto:partenariats@chl.be">partenariats@chl.be</a></p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">🌐</div>
+        <h4>Site officiel</h4>
+        <p><a href="https://www.chl.be" target="_blank">www.chl.be</a></p>
+      </div>
+    </div>
+  </div>
+</div><!-- fin page innovation -->
+
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo-row">
+        <div class="footer-logo-icon">CHL</div>
+        <div>
+          <div style="color: white; font-size: 15px; font-weight: 600;">Centre Hospitalier de Liège</div>
+          <div style="color: rgba(255,255,255,0.5); font-size: 12px;">Hôpital Universitaire Public</div>
+        </div>
+      </div>
+      <p>Le CHL est un hôpital public affilié à l'Université de Liège. Il offre des soins de qualité à l'ensemble de la population liégeoise et de la grande région depuis 1872.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a onclick="showPage('accueil')">Accueil</a></li>
+        <li><a onclick="showPage('apropos')">À propos</a></li>
+        <li><a onclick="showPage('galerie')">Galerie</a></li>
+        <li><a onclick="showPage('effectifs')">Effectifs</a></li>
+        <li><a onclick="showPage('innovation')">Innovation</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a>Urgences 24h/24</a></li>
+        <li><a>Consultations</a></li>
+        <li><a>Maternité</a></li>
+        <li><a>Oncologie</a></li>
+        <li><a>Chirurgie</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+3242256111">+32 4 225 61 11</a></li>
+        <li><a href="mailto:info@chl.be">info@chl.be</a></li>
+        <li><a>Rue de Gaillarmont 600</a></li>
+        <li><a>4032 Chênée, Liège</a></li>
+        <li><a href="https://www.chl.be" target="_blank">www.chl.be</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Centre Hospitalier de Liège — Tous droits réservés</span>
+    <span>Hôpital Universitaire Public — Accredité Joint Commission International</span>
+  </div>
+</footer>
+
+
+<script>
+// ── NAVIGATION ENTRE PAGES ──
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function setActive(el) {
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+  el.classList.add('active');
+}
+
+function toggleMenu() {
+  const links = document.querySelector('.nav-links');
+  links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+  links.style.flexDirection = 'column';
+  links.style.position = 'absolute';
+  links.style.top = '72px';
+  links.style.left = '0';
+  links.style.right = '0';
+  links.style.background = 'white';
+  links.style.padding = '1rem 2rem';
+  links.style.borderBottom = '1px solid rgba(0,63,127,0.1)';
+  links.style.zIndex = '999';
+}
+
+// ── GALERIE ──
+const galleryData = [
+  { cat: 'batiments', icon: '🏛️', label: 'Site principal', sub: 'Sart Tilman', bg: 'linear-gradient(135deg, #e8f0fa, #c5d9f0)' },
+  { cat: 'equipes', icon: '👩‍⚕️', label: 'Équipe de cardiologie', sub: 'Dr. Martin et son équipe', bg: 'linear-gradient(135deg, #e0f2f0, #b2dfdb)', tall: true },
+  { cat: 'tech', icon: '🤖', label: 'Robot chirurgical Da Vinci', sub: 'Bloc opératoire Nord', bg: 'linear-gradient(135deg, #f3e8ff, #ddd0f7)' },
+  { cat: 'vie', icon: '☕', label: 'Cafétéria & espaces de vie', sub: 'Bâtiment central', bg: 'linear-gradient(135deg, #fef9ec, #fde68a)' },
+  { cat: 'batiments', icon: '🚑', label: 'Entrée des urgences', sub: 'Disponible 24h/24', bg: 'linear-gradient(135deg, #fce4ec, #f8bbd0)' },
+  { cat: 'formation', icon: '📚', label: 'Amphithéâtre de formation', sub: 'Centre de simulation', bg: 'linear-gradient(135deg, #e8f5e9, #c8e6c9)', tall: true },
+  { cat: 'tech', icon: '🔬', label: 'Laboratoire de génomique', sub: 'Unité de recherche', bg: 'linear-gradient(135deg, #e3f2fd, #bbdefb)' },
+  { cat: 'equipes', icon: '👨‍⚕️', label: 'Service de pédiatrie', sub: 'Accueil des enfants', bg: 'linear-gradient(135deg, #fff3e0, #ffcc80)' },
+  { cat: 'batiments', icon: '🌿', label: 'Jardins thérapeutiques', sub: 'Espace bien-être', bg: 'linear-gradient(135deg, #e8f5e9, #a5d6a7)' },
+  { cat: 'vie', icon: '🎨', label: 'Art en milieu hospitalier', sub: 'Programme Kultur', bg: 'linear-gradient(135deg, #fce4ec, #f48fb1)' },
+  { cat: 'tech', icon: '🧲', label: 'IRM 3 Tesla', sub: 'Imagerie médicale', bg: 'linear-gradient(135deg, #e8eaf6, #c5cae9)' },
+  { cat: 'formation', icon: '🎓', label: 'Remise des diplômes', sub: 'École infirmière CHL', bg: 'linear-gradient(135deg, #fff8e1, #fff176)' },
+];
+
+function renderGallery(filter) {
+  const grid = document.getElementById('gallery-grid');
+  const items = filter === 'all' ? galleryData : galleryData.filter(i => i.cat === filter);
+  grid.innerHTML = items.map(item => `
+    <div class="gallery-item ${item.tall ? 'tall' : ''}" data-cat="${item.cat}">
+      <div class="gallery-img" style="background: ${item.bg};">${item.icon}</div>
+      <div class="gallery-overlay">
+        <div class="gallery-overlay-text">
+          <h4>${item.label}</h4>
+          <p>${item.sub}</p>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function filterGallery(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderGallery(cat);
+}
+
+renderGallery('all');
+
+// ── EFFECTIFS ──
+const teamData = [
+  { name: 'Prof. Sophie Renard', role: 'Chef de service', dept: 'Cardiologie', cat: 'cardio', tags: ['Cardiologie interventionnelle', 'Recherche'], color: '#003f7f', initials: 'SR' },
+  { name: 'Dr. Marc Dubois', role: 'Cardiologue Senior', dept: 'Cardiologie', cat: 'cardio', tags: ['Électrophysiologie', 'Pacing'], color: '#0057a8', initials: 'MD' },
+  { name: 'Prof. Claire Fontaine', role: 'Neurologue en chef', dept: 'Neurologie', cat: 'neuro', tags: ['AVC', 'Épilepsie', 'SEP'], color: '#7c3aed', initials: 'CF' },
+  { name: 'Dr. Ahmed Hassan', role: 'Neurochirurgien', dept: 'Neurologie', cat: 'neuro', tags: ['Neurochirurgie', 'Tumeurs'], color: '#6d28d9', initials: 'AH' },
+  { name: 'Dr. Élodie Martin', role: 'Pédiatre Senior', dept: 'Pédiatrie', cat: 'pediatrie', tags: ['Néonatologie', 'Prématurité'], color: '#00897b', initials: 'EM' },
+  { name: 'Dr. Thomas Lecomte', role: 'Pédiatre Urgentiste', dept: 'Pédiatrie', cat: 'pediatrie', tags: ['Urgences pédiatriques'], color: '#00796b', initials: 'TL' },
+  { name: 'Prof. Anne-Sophie Koch', role: 'Oncologue médicale', dept: 'Oncologie', cat: 'onco', tags: ['Cancer sein', 'Immunothérapie'], color: '#c0392b', initials: 'AK' },
+  { name: 'Dr. Jean-Pierre Maes', role: 'Oncologue digestif', dept: 'Oncologie', cat: 'onco', tags: ['Côlon', 'Pancréas', 'Foie'], color: '#a93226', initials: 'JM' },
+  { name: 'Dr. Laure Piron', role: 'Médecin urgentiste', dept: 'Urgences', cat: 'urgences', tags: ['Urgences adultes', 'SMUR'], color: '#e74c3c', initials: 'LP' },
+  { name: 'Dr. Karim Bensalem', role: 'Urgentiste Senior', dept: 'Urgences', cat: 'urgences', tags: ['Traumatologie', 'Réanimation'], color: '#c0392b', initials: 'KB' },
+  { name: 'Prof. Henri Verbeke', role: 'Directeur de recherche', dept: 'Recherche', cat: 'recherche', tags: ['Génomique', 'IA médicale', 'Essais cliniques'], color: '#c8902d', initials: 'HV' },
+  { name: 'Dr. Nathalie Colart', role: 'Chercheuse en immunologie', dept: 'Recherche', cat: 'recherche', tags: ['Immunothérapie', 'Auto-immunité'], color: '#b7770d', initials: 'NC' },
+];
+
+function renderTeam(filter) {
+  const grid = document.getElementById('team-grid');
+  const items = filter === 'all' ? teamData : teamData.filter(m => m.cat === filter);
+  grid.innerHTML = items.map(m => `
+    <div class="member-card">
+      <div class="member-avatar" style="background: ${m.color};">${m.initials}</div>
+      <h3>${m.name}</h3>
+      <div class="member-role">${m.role}</div>
+      <div class="member-dept">🏥 ${m.dept}</div>
+      <div class="member-tags">${m.tags.map(t => `<span class="member-tag">${t}</span>`).join('')}</div>
+    </div>
+  `).join('');
+}
+
+function filterTeam(cat, btn) {
+  document.querySelectorAll('.dept-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderTeam(cat);
+}
+
+renderTeam('all');
+</script>
+
+</body>
+</html>
