@@ -740,26 +740,29 @@ function toggleMenu() {
 
 // ── GALERIE ──
 const galleryData = [
-  { cat: 'batiments', icon: '🏛️', label: 'Site principal', sub: 'Sart Tilman', bg: 'linear-gradient(135deg, #e8f0fa, #c5d9f0)' },
-  { cat: 'equipes', icon: '👩‍⚕️', label: 'Équipe de cardiologie', sub: 'Dr. Martin et son équipe', bg: 'linear-gradient(135deg, #e0f2f0, #b2dfdb)', tall: true },
-  { cat: 'tech', icon: '🤖', label: 'Robot chirurgical Da Vinci', sub: 'Bloc opératoire Nord', bg: 'linear-gradient(135deg, #f3e8ff, #ddd0f7)' },
-  { cat: 'vie', icon: '☕', label: 'Cafétéria & espaces de vie', sub: 'Bâtiment central', bg: 'linear-gradient(135deg, #fef9ec, #fde68a)' },
-  { cat: 'batiments', icon: '🚑', label: 'Entrée des urgences', sub: 'Disponible 24h/24', bg: 'linear-gradient(135deg, #fce4ec, #f8bbd0)' },
-  { cat: 'formation', icon: '📚', label: 'Amphithéâtre de formation', sub: 'Centre de simulation', bg: 'linear-gradient(135deg, #e8f5e9, #c8e6c9)', tall: true },
-  { cat: 'tech', icon: '🔬', label: 'Laboratoire de génomique', sub: 'Unité de recherche', bg: 'linear-gradient(135deg, #e3f2fd, #bbdefb)' },
-  { cat: 'equipes', icon: '👨‍⚕️', label: 'Service de pédiatrie', sub: 'Accueil des enfants', bg: 'linear-gradient(135deg, #fff3e0, #ffcc80)' },
-  { cat: 'batiments', icon: '🌿', label: 'Jardins thérapeutiques', sub: 'Espace bien-être', bg: 'linear-gradient(135deg, #e8f5e9, #a5d6a7)' },
-  { cat: 'vie', image: 'https://i.imgur.com/FIWNx54.jpeg', label: 'Art en milieu hospitalier', sub: 'Programme Kultur', bg: 'linear-gradient(135deg, #fce4ec, #f48fb1)' },
-  { cat: 'tech', icon: '🧲', label: 'IRM 3 Tesla', sub: 'Imagerie médicale', bg: 'linear-gradient(135deg, #e8eaf6, #c5cae9)' },
-  { cat: 'formation', icon: '🎓', label: 'Remise des diplômes', sub: 'École infirmière CHL', bg: 'linear-gradient(135deg, #fff8e1, #fff176)' },
+  { cat: 'batiments', label: 'Site principal', sub: 'Sart Tilman', image: 'https://i.imgur.com/FIWNx54.jpeg' },
+  { cat: 'equipes', label: 'Équipe de cardiologie', sub: 'Dr. Martin et son équipe', image: 'https://i.imgur.com/FIWNx54.jpeg', tall: true },
+  { cat: 'tech', label: 'Robot chirurgical Da Vinci', sub: 'Bloc opératoire Nord', image: 'https://i.imgur.com/FIWNx54.jpeg' },
+  { cat: 'vie', label: 'Cafétéria & espaces de vie', sub: 'Bâtiment central', image: 'https://i.imgur.com/FIWNx54.jpeg' },
+  { cat: 'batiments', label: 'Entrée des urgences', sub: 'Disponible 24h/24', image: 'https://i.imgur.com/FIWNx54.jpeg' },
+  { cat: 'formation', label: 'Amphithéâtre de formation', sub: 'Centre de simulation', image: 'https://i.imgur.com/FIWNx54.jpeg', tall: true },
+  { cat: 'tech', label: 'Laboratoire de génomique', sub: 'Unité de recherche', image: 'https://i.imgur.com/FIWNx54.jpeg' },
+  { cat: 'equipes', label: 'Service de pédiatrie', sub: 'Accueil des enfants', image: 'https://i.imgur.com/FIWNx54.jpeg' },
+  { cat: 'batiments', label: 'Jardins thérapeutiques', sub: 'Espace bien-être', image: 'https://i.imgur.com/FIWNx54.jpeg' },
+  { cat: 'vie', label: 'Art en milieu hospitalier', sub: 'Programme Kultur', image: 'https://i.imgur.com/FIWNx54.jpeg' },
+  { cat: 'tech', label: 'IRM 3 Tesla', sub: 'Imagerie médicale', image: 'https://i.imgur.com/FIWNx54.jpeg' },
+  { cat: 'formation', label: 'Remise des diplômes', sub: 'École infirmière CHL', image: 'https://i.imgur.com/FIWNx54.jpeg' },
 ];
 
 function renderGallery(filter) {
   const grid = document.getElementById('gallery-grid');
   const items = filter === 'all' ? galleryData : galleryData.filter(i => i.cat === filter);
+  
   grid.innerHTML = items.map(item => `
     <div class="gallery-item ${item.tall ? 'tall' : ''}" data-cat="${item.cat}">
-      <div class="gallery-img" style="background: ${item.bg};">${item.icon}</div>
+      <div class="gallery-img">
+        <img src="${item.image}" alt="${item.label}">
+      </div>
       <div class="gallery-overlay">
         <div class="gallery-overlay-text">
           <h4>${item.label}</h4>
@@ -776,6 +779,7 @@ function filterGallery(cat, btn) {
   renderGallery(cat);
 }
 
+// Initialisation
 renderGallery('all');
 
 // ── EFFECTIFS ──
