@@ -30,9 +30,10 @@
       <li><a href="#" onclick="showPage('apropos'); setActive(this)">À propos</a></li>
       <li><a href="#" onclick="showPage('galerie'); setActive(this)">Galerie</a></li>
       <li><a href="#" onclick="showPage('effectifs'); setActive(this)">Effectifs</a></li>
-      <li><a href="#" onclick="showPage('innovation'); setActive(this)">Innovation</a></li>
-      <li><a href="https://stiorxtwitch.github.io/rejoins-nous-chl/" onclick="showPage('rdv'); setActive(this)">Nous Rejoindre</a></li>
-      <li><a href="https://stiorxtwitch.github.io/nos-medecin-chl/" onclick="showPage('rdv'); setActive(this)">Rendez-vous</a></li>
+      <li><a href="https://chl-learning.com/"; setActive(this)">Platforme Formation</a></li>
+      <li><a href="https://stiorxtwitch.github.io/rejoins-nous-chl/"; setActive(this)">Nous Rejoindre</a></li>
+      <li><a href="https://stiorxtwitch.github.io/nos-medecin-chl/"; setActive(this)">Rendez-vous</a></li>
+      <li><a href="https://stiorxtwitch.github.io/chl-cloud/"; setActive(this)">Cloud CHL</a></li>
       <li><a href="https://discord.gg/ZHnF7jJtbp" class="btn nav-cta">📞 Contact</a></li>
     </ul>
     <button class="nav-hamburger" onclick="toggleMenu()">
@@ -445,10 +446,10 @@
       <p>Plus de 4 500 collaborateurs — médecins, infirmiers, chercheurs, soignants — œuvrent chaque jour pour votre santé avec passion et expertise.</p>
       <div class="dept-tabs" style="margin-top: 1.5rem;">
         <button class="dept-tab active" onclick="filterTeam('all', this)">Tous les services</button>
-        <button class="dept-tab" onclick="filterTeam('cardio', this)">Cardiologie</button>
-        <button class="dept-tab" onclick="filterTeam('neuro', this)">Neurologie</button>
-        <button class="dept-tab" onclick="filterTeam('pediatrie', this)">Pédiatrie</button>
-        <button class="dept-tab" onclick="filterTeam('onco', this)">Oncologie</button>
+        <button class="dept-tab" onclick="filterTeam('direction', this)">Direction</button>
+        <button class="dept-tab" onclick="filterTeam('medicale', this)">Unité Médicale</button>
+        <button class="dept-tab" onclick="filterTeam('soins', this)">Unité de Soins</button>
+        <button class="dept-tab" onclick="filterTeam('intervention', this)">Unité d'Intervention</button>
         <button class="dept-tab" onclick="filterTeam('urgences', this)">Urgences</button>
         <button class="dept-tab" onclick="filterTeam('recherche', this)">Recherche</button>
       </div>
@@ -682,7 +683,6 @@
         <li><a onclick="showPage('apropos')">À propos</a></li>
         <li><a onclick="showPage('galerie')">Galerie</a></li>
         <li><a onclick="showPage('effectifs')">Effectifs</a></li>
-        <li><a onclick="showPage('innovation')">Innovation</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -786,18 +786,23 @@ renderGallery('all');
 
 // ── EFFECTIFS ──
 const teamData = [
-  { name: 'Prof. Sophie Renard', role: 'Chef de service', dept: 'Cardiologie', cat: 'cardio', tags: ['Cardiologie interventionnelle', 'Recherche'], color: '#003f7f', initials: 'SR' },
-  { name: 'Dr. Marc Dubois', role: 'Cardiologue Senior', dept: 'Cardiologie', cat: 'cardio', tags: ['Électrophysiologie', 'Pacing'], color: '#0057a8', initials: 'MD' },
-  { name: 'Prof. Claire Fontaine', role: 'Neurologue en chef', dept: 'Neurologie', cat: 'neuro', tags: ['AVC', 'Épilepsie', 'SEP'], color: '#7c3aed', initials: 'CF' },
-  { name: 'Dr. Ahmed Hassan', role: 'Neurochirurgien', dept: 'Neurologie', cat: 'neuro', tags: ['Neurochirurgie', 'Tumeurs'], color: '#6d28d9', initials: 'AH' },
-  { name: 'Dr. Élodie Martin', role: 'Pédiatre Senior', dept: 'Pédiatrie', cat: 'pediatrie', tags: ['Néonatologie', 'Prématurité'], color: '#00897b', initials: 'EM' },
-  { name: 'Dr. Thomas Lecomte', role: 'Pédiatre Urgentiste', dept: 'Pédiatrie', cat: 'pediatrie', tags: ['Urgences pédiatriques'], color: '#00796b', initials: 'TL' },
-  { name: 'Prof. Anne-Sophie Koch', role: 'Oncologue médicale', dept: 'Oncologie', cat: 'onco', tags: ['Cancer sein', 'Immunothérapie'], color: '#c0392b', initials: 'AK' },
-  { name: 'Dr. Jean-Pierre Maes', role: 'Oncologue digestif', dept: 'Oncologie', cat: 'onco', tags: ['Côlon', 'Pancréas', 'Foie'], color: '#a93226', initials: 'JM' },
-  { name: 'Dr. Laure Piron', role: 'Médecin urgentiste', dept: 'Urgences', cat: 'urgences', tags: ['Urgences adultes', 'SMUR'], color: '#e74c3c', initials: 'LP' },
-  { name: 'Dr. Karim Bensalem', role: 'Urgentiste Senior', dept: 'Urgences', cat: 'urgences', tags: ['Traumatologie', 'Réanimation'], color: '#c0392b', initials: 'KB' },
-  { name: 'Prof. Henri Verbeke', role: 'Directeur de recherche', dept: 'Recherche', cat: 'recherche', tags: ['Génomique', 'IA médicale', 'Essais cliniques'], color: '#c8902d', initials: 'HV' },
-  { name: 'Dr. Nathalie Colart', role: 'Chercheuse en immunologie', dept: 'Recherche', cat: 'recherche', tags: ['Immunothérapie', 'Auto-immunité'], color: '#b7770d', initials: 'NC' },
+  { name: 'Dr. Ricardo Rodriguez', role: 'Directeur CHL', dept: 'Direction', cat: 'direction', tags: ['Gérant Recrutement', 'Directeur Général'], color: '#003f7f', initials: 'RR' },
+  { name: 'Dr. Marc Lejeune', role: 'Chirurgien', dept: 'Unité Médicale', cat: 'medicale', tags: ['Gérant Formation', 'Responsable Comité Informatique', 'Référant Soin'], color: '#0057a8', initials: 'ML' },
+  { name: 'Dr. Liam Moretti', role: 'Secrétaire', dept: 'Direction', cat: 'direction', tags: ['Gérant RH', 'Assistant Chirurgien'], color: '#7c3aed', initials: 'LM' },
+  { name: 'Dr. Alexis Viatour', role: 'Médecin', dept: 'Unité Médicale', cat: 'medicale', tags: ['Médecin Généraliste'], color: '#6d28d9', initials: 'AV' },
+  { name: 'Michel Stanford', role: 'Infirmier en Chef', dept: 'Unité de Soins', cat: 'soins', tags: ['Infirmier SIAMU', 'Co-Référant Soins'], color: '#00897b', initials: 'MS' },
+  { name: 'Connor Paradisio', role: 'Infirmier', dept: 'Unité de Soins', cat: 'soins', tags: ['Infirmier A1'], color: '#00796b', initials: 'CP' },
+  { name: 'Aaron Marino', role: 'Infirmier', dept: 'Unité de Soins', cat: 'soins', tags: ['Infirmier A2'], color: '#c0392b', initials: 'AM' },
+  { name: 'Paul Mendez', role: 'Infirmier', dept: 'Unité de Soins', cat: 'soins', tags: ['Infirmier A1'], color: '#a93226', initials: 'PM' },
+  { name: 'Anémone Regnier', role: 'Infirmière', dept: 'Unité de Soins', cat: 'soins', tags: ['Infirmière A2'], color: '#e74c3c', initials: 'AR' },
+  { name: 'Lorelai Deltour', role: 'Stagiaire', dept: 'Unité de Soins', cat: 'soins', tags: ['Stagiaire Infirmière'], color: '#c0392b', initials: 'LD' },
+  { name: 'Alessio Christ', role: 'Stagiaire', dept: 'Unité de Soins', cat: 'soins', tags: ['Stagiaire Infirmier'], color: '#c8902d', initials: 'AC' },
+  { name: 'Alex Minzey', role: 'Stagiaire', dept: 'Unité de Soins', cat: 'soins', tags: ['Stagiaire Infirmier'], color: '#b7770d', initials: 'AM' },
+  { name: 'Thomas Dumont', role: 'Stagiaire', dept: 'Unité de Soins', cat: 'soins', tags: ['Stagiaire Infirmier'], color: '#b7770d', initials: 'TD' },
+  { name: 'Tonia Ricci', role: 'Stagiaire', dept: 'Unité de Soins', cat: 'soins', tags: ['Stagiaire Infirmière'], color: '#b7770d', initials: 'TR' },
+  { name: 'Maeva Mancini', role: 'Stagiaire', dept: 'Unité de Soins', cat: 'soins', tags: ['Stagiaire Infirmière'], color: '#b7770d', initials: 'MM' },
+  { name: 'Emma Broocks', role: 'Stagiaire', dept: 'Unité de Soins', cat: 'soins', tags: ['Stagiaire Infirmière'], color: '#b7770d', initials: 'EB' },
+  { name: 'Ben Fox', role: 'Stagiaire', dept: 'Unité de Soins', cat: 'soins', tags: ['Stagiaire Infirmier'], color: '#b7770d', initials: 'BF' },
 ];
 
 function renderTeam(filter) {
